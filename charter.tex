@@ -4,7 +4,7 @@ codirector, % Uncomment to add a codirector to the title page
 ]{charter}
 
 % El títulos de la memoria, se usa en la carátula y se puede usar el cualquier lugar del documento con el comando \ttitle
-\titulo{Controlador de pH}
+\titulo{Controlador de pH para cultivos hidropónicos}
 
 % Nombre del posgrado, se usa en la carátula y se puede usar el cualquier lugar del documento con el comando \degreename
 \posgrado{Carrera de Especialización en Sistemas Embebidos} 
@@ -14,7 +14,7 @@ codirector, % Uncomment to add a codirector to the title page
 %\posgrado{Maestría en Internet de las cosas}
 % IMPORTANTE: no omitir titulaciones ni tildación en los nombres, también se recomienda escribir los nombres completos (tal cual los tienen en su documento)
 % Tu nombre, se puede usar el cualquier lugar del documento con el comando \authorname
-\autor{Iván Podoroska}
+\autor{Ing. Iván Podoroska}
 
 % El nombre del director y co-director, se puede usar el cualquier lugar del documento con el comando \supname y \cosupname y \pertesupname y \pertecosupname
 \director{Ing. Juan Pepito}
@@ -28,7 +28,7 @@ codirector, % Uncomment to add a codirector to the title page
  
 \fechaINICIO{29 de abril de 2024}		%Fecha de inicio de la cursada de GdP \fechaInicioName
 \fechaFINALPlan{11 de junio de 2024} 	%Fecha de final de cursada de GdP
-\fechaFINALTrabajo{15 de mayo de 2025}	%Fecha de defensa pública del trabajo final
+\fechaFINALTrabajo{10 de diciembre de 2024}	%Fecha de defensa pública del trabajo final
 
 
 \begin{document}
@@ -56,13 +56,13 @@ codirector, % Uncomment to add a codirector to the title page
 \rowcolor[HTML]{C0C0C0} 
 Revisión & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Detalles de los cambios realizados} & Fecha      \\ \hline
 0      & Creación del documento                                 &\fechaInicioName \\ \hline
-1      & Se completa hasta el punto 5 inclusive                & {7} de {mayo} de 2024 \\ \hline
-%2      & Se completa hasta el punto 9 inclusive
+1      & Se completa hasta el punto 5 inclusive                 & {7} de {mayo} de 2024 \\ \hline
+2      & Se completa hasta el punto 9 inclusive					& {14} de {mayo} de 2024 \\ \hline
+3      & Se completa hasta el punto 12 inclusive                & {21} de {mayo} de 2024 \\ \hline
+%4      & Se completa el plan	                                 & {día} de {mes} de 202X \\ \hline
 %		  Se puede agregar algo más \newline
 %		  En distintas líneas \newline
 %		  Así                                                    & {día} de {mes} de 202X \\ \hline
-%3      & Se completa hasta el punto 12 inclusive                & {día} de {mes} de 202X \\ \hline
-%4      & Se completa el plan	                                 & {día} de {mes} de 202X \\ \hline
 
 % Si hay más correcciones pasada la versión 4 también se deben especificar acá
 
@@ -82,7 +82,7 @@ Buenos Aires, \fechaInicioName
 
 \vspace{2cm}
 
-Por medio de la presente se acuerda con el Ing. \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'' y consistirá en la implementación de un prototipo de un sistema de control de pH para cultivos hidropónicos. El trabajo tendrá un presupuesto preliminar estimado de 600 horas y un costo de \$400.000, con fecha de inicio el \fechaInicioName\hspace{1px} y fecha de presentación pública el \fechaFinalName.
+Por medio de la presente se acuerda con el Ing. \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'' y consistirá en la implementación de un prototipo de un sistema de control de pH para cultivos hidropónicos. El trabajo tendrá un presupuesto preliminar estimado de 720 horas y un costo de \$14510000, con fecha de inicio el \fechaInicioName\hspace{1px} y fecha de presentación pública el \fechaFinalName.
 
 Se adjunta a esta acta la planificación inicial.
 
@@ -103,21 +103,21 @@ Se adjunta a esta acta la planificación inicial.
 \section{1. Descripción técnica-conceptual del proyecto a realizar}
 \label{sec:descripcion}
 
-La agricultura hidropónica es un método utilizado para cultivar plantas sin tierra, usando una solución rica en nutrientes. Mediante el contacto directo de las raíces con la solución nutritiva, se logra un suministro constante y eficiente de macronutrientes y micronutrientes esenciales. Para su absorción, intervienen procesos de transporte activo y ósmosis, que requieren un pH controlado para garantizar el transporte de los nutrientes hacia la planta.
+La agricultura hidropónica es un método utilizado para cultivar plantas sin tierra, usando una solución rica en nutrientes. Mediante el contacto directo de las raíces con la solución nutritiva se logra un suministro constante y eficiente de macronutrientes y micronutrientes esenciales. Para su absorción, intervienen procesos de transporte activo y ósmosis, que requieren un pH controlado para garantizar el transporte de los nutrientes hacia la planta.
 
-La empresa Cannfeel incorpora equipos para la medición y control de cultivos de precisión mediante IOT. El objetivo de este proyecto es sumar un producto más al ecosistema, que sea capaz de regular y controlar el pH de soluciones nutritivas. Deberá poder integrarse a los equipos existentes y funcionar de manera autónoma.
+La empresa Cannfeel incorpora equipos para la medición y control de cultivos de precisión mediante Internet de las Cosas (IOT, por sus siglas en inglés). El objetivo de este proyecto es sumar un producto más al ecosistema, que sea capaz de regular y controlar el pH de soluciones nutritivas. Deberá poder integrarse a los equipos existentes y funcionar de manera autónoma.
 
 El proyecto permitirá abstraer al cultivador de la tarea manual de la regulación del pH de la solución nutritiva. Al estar incluida en el ecosistema de la empresa, el usuario podrá tener acceso en tiempo real al estado de la solución nutritiva a través de una aplicación web ya implementada.
 
-El sistema deberá ser capaz de medir el pH y la temperatura de una solución nutritiva. Contará con un \textit{encoder} rotativo con botón y una pantalla, donde el usuario podrá ingresar el valor de pH que desee para la solución. El sistema tendrá que ser capás de regular el pH, utilizando una solución \textit{buffer}. Para llevar a cabo la inyección de la sustancia reguladora, se contará con una bomba peristáltica como se observa en la figura \ref{fig:diagBloq}.
+El sistema deberá ser capaz de medir el pH y la temperatura de una solución nutritiva. Contará con un \textit{encoder} rotativo con botón y una pantalla, donde el usuario podrá ingresar el valor de pH que desee para la solución. El sistema tendrá que ser capaz de controlar el pH, utilizando una solución \textit{buffer}. Para llevar a cabo la inyección de la sustancia reguladora, se contará con una bomba peristáltica como se observa en la figura \ref{fig:diagBloq}.
 
-El reto del presente proyecto es poder implementar tanto el \textit{hardware} como el \textit{firmware} asociado para alcanzar la solución propuesta en el tiempo estimado.
+El reto del presente proyecto es poder implementar tanto el hardware como el firmware asociado para alcanzar la solución propuesta en el tiempo estimado.
 
 En la figura \ref{fig:diagBloq} se representa el diagrama en bloques del sistema.
 
 \begin{figure}[htpb]
 \centering 
-\includegraphics[width=.65\textwidth]{./Figuras/diagBloq.png}
+\includegraphics[width=.85\textwidth]{./Figuras/diagBloq.png}
 \caption{Diagrama en bloques del sistema.}
 \label{fig:diagBloq}
 \end{figure}
@@ -126,7 +126,7 @@ En la figura \ref{fig:diagCtrl} se representa el diagrama en bloque del esquema 
 
 \begin{figure}[htpb]
 \centering
-\includegraphics[width=.65\textwidth]{./Figuras/diagCtrl.png}
+\includegraphics[width=.85\textwidth]{./Figuras/diagCtrl.png}
 \caption{Diagrama de control del sistema.}
 \label{fig:diagCtrl}
 \end{figure}
@@ -167,8 +167,8 @@ El presente proyecto incluye:
 \begin{itemize}
 	\item Diseño e implementación de un prototipo.
 		\begin{itemize}
-		\item Diseño de \textit{hardware}.
-		\item Diseño de \textit{firmware}.
+		\item Diseño de hardware.
+		\item Diseño de firmware.
 		\end{itemize}
 	\item Elección del display para la interfaz.
 	\item Elección del \textit{encoder} rotativo.
@@ -184,7 +184,7 @@ El presente proyecto incluye:
 El presente proyecto no incluye:
 \begin{itemize}
 	\item Diseño y fabricación de la carcaza del dispositivo.
-	\item Modificaciones en la aplicación web existente
+	\item Modificaciones en la aplicación web existente.
 	\item Manual de usuario.
 	\item Manual de instalación.
 \end{itemize}
@@ -196,7 +196,7 @@ El presente proyecto no incluye:
 
 \begin{itemize}
 	\item Se tendrá a disposición los equipos de la empresa Cannfeel SA cuando sean requeridos.
-	\item Se utilizaran herramientas que no requieran licencia.
+	\item Se utilizarán herramientas que no requieran licencia.
 	\item Todos los componentes estarán disponibles para su compra.
 	\item Será posible desarrollar los PCBs del prototipo de prueba.
 	\item Los tiempos de importación y de fabricación estarán dentro de lo planeado.
@@ -208,238 +208,218 @@ El presente proyecto no incluye:
 \section{6. Requerimientos}
 \label{sec:requerimientos}
 
-\begin{consigna}{red}
-Los requerimientos deben enumerarse y de ser posible estar agrupados por afinidad, por ejemplo:
-
 \begin{enumerate}
-	\item Requerimientos funcionales:
+	\item Requerimientos técnicos
 		\begin{enumerate}
-			\item El sistema debe...
-			\item Tal componente debe...
-			\item El usuario debe poder...
+			\item El sistema se deberá alimentar con una fuente de alimentación externa.
+			\item El hardware deberá tener un driver para manejar una bomba peristáltica.
+			\item El hardware deberá contar con un conector para una sonda de pH.
+			\item El hardware deberá contar con un conector para una sonda de temperatura.
+			\item El hardware deberá acondicionar la señal de la sonda de pH.
+			\item El hardware deberá acondicionar la señal de la sonda de temperatura.
+			\item El sistema deberá encender y apagar una bomba de recirculación opcional.
 		\end{enumerate}
-	\item Requerimientos de documentación:
+		
+	\item Requerimientos funcionales
 		\begin{enumerate}
-			\item Requerimiento 1.
-			\item Requerimiento 2 (prioridad menor)
+			\item El sistema deberá compensar la medición de pH con la temperatura de la solución.
+			\item El sistema deberá reconocer una falla por falta de solución \textit{buffer}.
+			\item El sistema deberá reconocer si no puede controlar el pH de la solución nutritiva.
+			\item El sistema deberá tener un modo de control donde intente corregir el pH de la solución constantemente.
+			\item El sistema deberá contar con un modo de solo lectura que se limite a mostrar en la pantalla los valores obtenidos de los sensores.
+			\item El sistema deberá contar con un modo de configuración donde se podrán calibrar los sensores y configurar el valor deseado de pH para el control.
 		\end{enumerate}
-	\item Requerimiento de testing...
-	\item Requerimientos de la interfaz...
-	\item Requerimientos interoperabilidad...
-	\item etc...
+		
+	\item Requerimientos de interoperabilidad
+		\begin{enumerate}
+			\item El controlador se deberá integrar al ecosistema de dispositivos de la empresa Cannfeel mediante un protocolo propietario.
+		\end{enumerate}	
+		
+	\item Requerimientos de la interfaz
+		\begin{enumerate}
+			\item El hardware deberá contar con una pantalla no táctil.
+			\item El hardware deberá contar con un \textit{encoder} rotativo incremental con botón.
+			\item El sistema permitirá configurar los parámetros del controlador desde la interfaz local.
+			\item El usuario deberá poder calibrar la sonda de pH en tres puntos desde la interfaz local.
+			\item El usuario deberá poder calibrar la sonda de temperatura desde la interfaz local.
+		\end{enumerate}
+		
+	\item Requerimientos de pruebas
+		\begin{enumerate}
+			\item El sistema no deberá funcionar en modo de regulación si detecta la falta de solución \textit{buffer}.
+		\end{enumerate}
+		
+	\item Requerimientos de documentación
+		\begin{enumerate}
+			\item Se confeccionarán informes de avance dirigidos al cliente y al director con la finalidad de controlar el avance del proyecto.
+			\item Se confeccionará una memoria técnica al finalizar el proyecto.
+		\end{enumerate}
 \end{enumerate}
-
-Leyendo los requerimientos se debe poder interpretar cómo será el proyecto y su funcionalidad.
-
-Indicar claramente cuál es la prioridad entre los distintos requerimientos y si hay requerimientos opcionales. 
-
-\textbf{¡¡¡No olvidarse de que los requerimientos incluyen a las regulaciones y normas vigentes!!!}
-
-Y al escribirlos seguir las siguientes reglas:
-\begin{itemize}
-	\item Ser breve y conciso (nadie lee cosas largas). 
-	\item Ser específico: no dejar lugar a confusiones.
-	\item Expresar los requerimientos en términos que sean cuantificables y medibles.
-\end{itemize}
-
-\end{consigna}
 
 \section{7. Historias de usuarios (\textit{Product backlog})}
 \label{sec:backlog}
 
-\begin{consigna}{red}
-Descripción: en esta sección se deben incluir las historias de usuarios y su ponderación (\textit{history points}). Recordar que las historias de usuarios son descripciones cortas y simples de una característica contada desde la perspectiva de la persona que desea la nueva capacidad, generalmente un usuario o cliente del sistema. La ponderación es un número entero que representa el tamaño de la historia comparada con otras historias de similar tipo.
+En esta sección se mostrarán las historias de usuarios según los roles de: cliente, usuario final y desarrollador. Se valoraron de acuerdo a un sistema de \textit{story points} basado en la estimación de tres categorías:
 
-Se debe indicar explícitamente el criterio para calcular los \textit{story points} de cada historia.
+\begin{itemize}
+	\item Complejidad del trabajo (C):
+	\begin{itemize}
+		\item Bajo: 1
+		\item Medio: 5
+		\item Alto: 13		
+	\end{itemize}
+	\item Dificultad del trabajo (D):
+	\begin{itemize}
+		\item Bajo: 1
+		\item Medio: 3
+		\item Alto: 5		
+	\end{itemize}
+	\item Riesgo del trabajo (R):
+	\begin{itemize}
+		\item Bajo: 1
+		\item Medio: 3
+		\item Alto: 5		
+	\end{itemize}
+\end{itemize}
 
-El formato propuesto es: 
+Para obtener la estimación final, se sumaron los valores asignados a cada aspecto y se aproximaron
+al siguiente número de la serie de Fibonacci. Por ejemplo, si la complejidad del trabajo es media (5), la dificultad es alta (5) y la incertidumbre es media (3), las suma de los \textit{story points} es 13 y se aproxima al siguiente número de Fibonacci, que es 21. La valoración final será 21.
+
 \begin{enumerate}
-\item ``Como [rol] quiero [tal cosa] para [tal otra cosa]."
-
-\textit{Story points}: 8 (complejidad: 3, dificultad: 2, incertidumbre: 3)
+	\item Como cliente, quiero que el sistema sea capaz de comunicarse con otros dispositivos del ecosistema de la empresa para que se integren y mejoren la solución ofrecida. 
+	\begin{itemize}
+		\item \textit{Story points}: 8 (C:1, D:5, R:1).	
+	\end{itemize}
+	
+	\item Como usuario final, quiero modificar los parámetros de medición del sensor de pH con el objetivo de calibrarlo.
+	\begin{itemize}
+		\item \textit{Story points}: 3 (C:1, D:1, R:1).	
+	\end{itemize}
+	
+	\item Como usuario final, quiero poder configurar el valor de pH a controlar de manera local para no depender de la conexión a una plataforma. 
+	\begin{itemize}
+		\item \textit{Story points}: 21 (C:13, D:3, R:3).	
+	\end{itemize}
+	
+	\item Como desarrollador, quiero implementar un controlador de pH preciso y de bajo costo para poder controlar la absorción de nutrientes de las plantas en cultivos hidropónicos.
+	\begin{itemize}
+		\item \textit{Story points}: 21 (C:13, D:5, R:3).	
+	\end{itemize}
 \end{enumerate}
-\end{consigna}
 
 \section{8. Entregables principales del proyecto}
 \label{sec:entregables}
 
-\begin{consigna}{red}
-Los entregables del proyecto son (ejemplo):
+Los entregables de proyecto son:
 
 \begin{itemize}
-	\item Manual de usuario.
+	\item Prototipo funcional.
+	\item Archivos para la producción del PCB.
 	\item Diagrama de circuitos esquemáticos.
+	\item Lista de materiales (BOM, por sus siglas en inglés).
 	\item Código fuente del firmware.
-	\item Diagrama de instalación.
+	\item Informes de avance.
 	\item Memoria del trabajo final.
-	\item etc...
 \end{itemize}
-\end{consigna}
 
 \section{9. Desglose del trabajo en tareas}
 \label{sec:wbs}
 
-\begin{consigna}{red}
-El WBS debe tener relación directa o indirecta con los requerimientos.  Son todas las actividades que se harán en el proyecto para dar cumplimiento a los requerimientos. Se recomienda mostrar el WBS mediante una lista indexada:
-
 \begin{enumerate}
-\item Grupo de tareas 1 (suma h)
+\item Investigación y documentación (92 h)
 	\begin{enumerate}
-	\item Tarea 1 (tantas h)
-	\item Tarea 2 (tantas h)
-	\item Tarea 3 (tantas h)
+	\item Investigar sobre el estado del arte (8 h).
+	\item Armar el plan de proyecto (32 h).
+	\item Investigación y elección de sensor de pH (16 h).
+	\item Investigación y elección de sensor de temperatura (16 h).
+	\item Investigación y elección de pantalla (12 h).
+	\item Investigación y elección de \textit{encoder} rotativo incremental (8 h).
 	\end{enumerate}
-\item Grupo de tareas 2 (suma h)
+	
+\item Diseño general (36 h)
 	\begin{enumerate}
-	\item Tarea 1 (tantas h)
-	\item Tarea 2 (tantas h)
-	\item Tarea 3 (tantas h)
+	\item Diseño de diagrama de módulos (8 h).
+	\item Diseño de diagrama de conexiones (8 h).
+	\item Elección de la fuente de alimentación externa (4 h).
+	\item Diseño de las interfaces de la pantalla (16 h).
 	\end{enumerate}
-\item Grupo de tareas 3 (suma h)
+	
+\item Desarrollo del hardware (152 h)
 	\begin{enumerate}
-	\item Tarea 1 (tantas h)
-	\item Tarea 2 (tantas h)
-	\item Tarea 3 (tantas h)
-	\item Tarea 4 (tantas h)
-	\item Tarea 5 (tantas h)
+	\item Elección de conectores y componentes de potencia (24 h).
+	\item Selección de componentes varios (8 h).
+	\item Diseño de diagramas esquemáticos (60 h).
+	\item Diseño del PCB y de los archivos de fabricación (40 h).
+	\item Armado del prototipo (20 h).
+	\end{enumerate}
+	
+\item Desarrollo del firmware (268 h)
+	\begin{enumerate}
+	\item Elección de la arquitectura (16 h).
+	\item Diseño en papel de los módulos a implementar (12 h).
+	\item Diseño de las máquinas de estados (40 h).
+	\item Diseño de pruebas (40 h).
+	\item Programación de firmware (120 h).
+	\item Verificación y validación (40 h).
+	\end{enumerate}
+	
+\item Pruebas y calibración (80 h)
+	\begin{enumerate}
+	\item Prueba del prototipo en modo de funcionamiento normal (40 h).
+	\item Prueba del prototipo en modo de funcionamiento en falla (20 h).
+	\item Ajustes finales y puesta a punto (20 h).
+	\end{enumerate}
+	
+\item Presentación final (92 h)
+	\begin{enumerate}
+	\item Redacción del informe de avances (12 h)
+	\item Redacción de la memoria técnica (60 h).
+	\item Presentación final (20 h).
 	\end{enumerate}
 \end{enumerate}
 
-Cantidad total de horas: tantas.
-
-\textbf{¡Importante!:} la unidad de horas es h y va separada por espacio del número. Es incorrecto escribir ``23hs".
-
-\textbf{Se recomienda que no haya ninguna tarea que lleve más de 40 h.} De ser así se recomienda dividirla en tareas de menor duración.
-
-\end{consigna}
+Cantidad total de horas: 720 h.
 
 \section{10. Diagrama de Activity On Node}
 \label{sec:AoN}
 
-\begin{consigna}{red}
-Armar el AoN a partir del WBS definido en la etapa anterior.
-
-Una herramienta simple para desarrollar los diagramas es el Draw.io (\url{https://app.diagrams.net/}).
-\href{https://app.diagrams.net}{Draw.io}
-
-
 \begin{figure}[htpb]
 \centering 
-\includegraphics[width=.8\textwidth]{./Figuras/AoN.png}
+\includegraphics[width=1\textwidth]{./Figuras/AoN-1.png}
 \caption{Diagrama de \textit{Activity on Node}.}
 \label{fig:AoN}
 \end{figure}
 
-Indicar claramente en qué unidades están expresados los tiempos.
-De ser necesario indicar los caminos semi críticos y analizar sus tiempos mediante un cuadro.
-Es recomendable usar colores y un cuadro indicativo describiendo qué representa cada color.
-
-\end{consigna}
-
 \section{11. Diagrama de Gantt}
 \label{sec:gantt}
 
-\begin{consigna}{red}
-Existen muchos programas y recursos \textit{online} para hacer diagramas de Gantt, entre los cuales destacamos:
+En la figura \ref{fig:gantt-1} y \ref{fig:gantt-2} se muestran el diagrama de Gantt correspondiente a las tareas detalladas en la figura \ref{fig:tasks}. Se toma un calendario de 5 días laborales por semana y se estima un trabajo de 20 horas semanales dividido en 4 horas diarias. Cada 'd' del diagrama representa 4 horas.
 
-\begin{itemize}
-\item Planner
-\item GanttProject
-\item Trello + \textit{plugins}. En el siguiente link hay un tutorial oficial: \\ \url{https://blog.trello.com/es/diagrama-de-gantt-de-un-proyecto}
-\item Creately, herramienta online colaborativa. \\\url{https://creately.com/diagram/example/ieb3p3ml/LaTeX}
-\item Se puede hacer en latex con el paquete \textit{pgfgantt}\\ \url{http://ctan.dcc.uchile.cl/graphics/pgf/contrib/pgfgantt/pgfgantt.pdf}
-\end{itemize}
-
-Pegar acá una captura de pantalla del diagrama de Gantt, cuidando que la letra sea suficientemente grande como para ser legible. 
-Si el diagrama queda demasiado ancho, se puede pegar primero la ``tabla'' del Gantt y luego pegar la parte del diagrama de barras del diagrama de Gantt.
-
-Configurar el software para que en la parte de la tabla muestre los códigos del EDT (WBS).\\
-Configurar el software para que al lado de cada barra muestre el nombre de cada tarea.\\
-Revisar que la fecha de finalización coincida con lo indicado en el Acta Constitutiva.
-
-En la figura \ref{fig:gantt}, se muestra un ejemplo de diagrama de gantt realizado con el paquete de \textit{pgfgantt}. 
-En la plantilla pueden ver el código que lo genera y usarlo de base para construir el propio.
-
-Las fechas pueden ser calculadas utilizando alguna de las herramientas antes citadas. Sin embargo, el siguiente ejemplo
-fue elaborado utilizando 
-\href{https://docs.google.com/spreadsheets/d/1fBz8NhSpc4tkkhz3KjJCbh1nR_ltDkfEcZi4tZXduqs}{esta hoja de cálculo}.
-
-Es importante destacar que el ancho del diagrama estará dado por la longitud del texto utilizado para las tareas 
-(Ejemplo: tarea 1, tarea 2, etcétera) y el valor \textit{x unit}. Para mejorar la apariencia del diagrama, es necesario
-ajustar este valor y, quizás, acortar los nombres de las tareas.
-
-\begin{figure}[htpb]
-  \begin{center}
-    \begin{ganttchart}[
-      time slot unit=day,
-      time slot format=isodate,
-      x unit=0.038cm,
-      y unit title=0.7cm,
-      y unit chart=0.6cm,
-      milestone/.append style={xscale=4}
-      ]{2021-03-05}{2021-12-16}
-      \gantttitlecalendar*{2021-03-05}{2021-12-16}{year} \\
-      \gantttitlecalendar*{2021-03-05}{2021-12-16}{month} \\
-      \ganttgroup{Duración Total}{2021-03-05}{2021-12-16} \\
-      %%%%%%%%%%%%%%%%%Organización
-      \ganttgroup{Organización}{2021-03-05}{2021-04-16} \\
-      \ganttbar{Planificación del proyecto}{2021-03-05}{2021-04-15} \\
-      %%%%%%%%%%%%%%%%%Ejecución
-      \ganttgroup{Ejecución}{2021-04-16}{2021-10-21} \\
-      \ganttbar{Tarea 1}{2021-04-16}{2021-04-29} \\
-      \ganttbar{Tarea 2}{2021-04-30}{2021-05-13} \\
-      \ganttbar{Tarea 3}{2021-05-14}{2021-05-27} \\
-      \ganttbar{Tarea 4}{2021-05-28}{2021-07-12} \\
-      \ganttbar{Tarea 5}{2021-07-13}{2021-08-09} \\
-      \ganttbar{Tarea 6}{2021-08-10}{2021-09-23} \\
-      \ganttbar{Tarea 7}{2021-09-24}{2021-09-30} \\
-      \ganttbar{Tarea 8}{2021-10-01}{2021-10-14} \\
-      \ganttbar{Tarea 9}{2021-10-15}{2021-10-21} \\
-      % %%%%%%%%%%%%%%%%%Finalización
-      \ganttgroup{Finalización}{2021-10-22}{2021-12-16} \\
-      \ganttbar{Memoria v1}{2021-10-22}{2021-11-04} \\
-      \ganttbar{Memoria v2}{2021-11-05}{2021-11-18} \\
-      \ganttbar{Memoria final}{2021-11-19}{2021-12-02} \\
-      % La fecha del siguiente milestone es la fecha en que terminamos la memoria
-      \ganttmilestone{Enviar memoria al director}{2021-12-02} \\
-      \ganttbar{Elaborar la presentación}{2021-12-03}{2021-12-16} \\
-      \ganttmilestone{Ensayo de la presentación}{2021-12-16} \\
-      %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    \end{ganttchart}
-  \end{center}
-  \caption{Diagrama de gantt de ejemplo}
-  \label{fig:gantt}
-\end{figure}
-
-
-\begin{landscape}
 \begin{figure}[htpb]
 \centering 
-\includegraphics[height=.85\textheight]{./Figuras/Gantt-2.png}
-\caption{Ejemplo de diagrama de Gantt (apaisado).} %Modificar este título acorde.
-\label{fig:diagGantt}
+\includegraphics[width=1\textwidth]{./Figuras/tasks.png}
+\caption{Tabla de diagrama de Gantt.}
+\label{fig:tasks}
 \end{figure}
 
-\end{landscape}
+\begin{figure}[htpb]
+\centering 
+\includegraphics[width=1\textwidth]{./Figuras/gantt-1.png}
+\caption{Diagrama de Gantt 1}
+\label{fig:gantt-1}
+\end{figure}
 
-\end{consigna}
-
+\begin{figure}[htpb]
+\centering 
+\includegraphics[width=1\textwidth]{./Figuras/gantt-2.png}
+\caption{Diagrama de Gantt 2}
+\label{fig:gantt-2}
+\end{figure}
 
 \section{12. Presupuesto detallado del proyecto}
 \label{sec:presupuesto}
 
-\begin{consigna}{red}
-Si el proyecto es complejo entonces separarlo en partes:
-\begin{itemize}
-	\item Un total global, indicando el subtotal acumulado por cada una de las áreas.
-	\item El desglose detallado del subtotal de cada una de las áreas.
-\end{itemize}
-
-IMPORTANTE: No olvidarse de considerar los COSTOS INDIRECTOS.
-
-Incluir la aclaración de si se emplea como moneda el peso argentino (ARS) o si se usa moneda extranjera (USD, EUR, etc). Si es en moneda extranjera se debe indicar la tasa de conversión respecto a la moneda local en una fecha dada.
-
-\end{consigna}
+Para la siguiente estimación de costos se toma 1 USD = 1000 ARS como tasa de cambio.
 
 \begin{table}[htpb]
 \centering
@@ -452,48 +432,73 @@ Descripción &
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Cantidad} &
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor unitario} &
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor total} \\ \hline
- &
-  \multicolumn{1}{c|}{} &
-  \multicolumn{1}{c|}{} &
-  \multicolumn{1}{c|}{} \\ \hline
- &
-  \multicolumn{1}{c|}{} &
-  \multicolumn{1}{c|}{} &
-  \multicolumn{1}{c|}{} \\ \hline
-\multicolumn{1}{|l|}{} &
-   &
-   &
-   \\ \hline
-\multicolumn{1}{|l|}{} &
-   &
-   &
-   \\ \hline
+ 
+ Salario ingeniero &
+  \multicolumn{1}{c|}{ 720 } &
+  \multicolumn{1}{c|}{ USD 15 } &
+  \multicolumn{1}{c|}{ USD 10800 } \\ \hline
+  
+ Punta de prueba pH &
+  \multicolumn{1}{c|}{ 1 } &
+  \multicolumn{1}{c|}{ USD 100 } &
+  \multicolumn{1}{c|}{ USD 100 } \\ \hline
+  
+ Soluciones \textit{buffers} de calibración &
+  \multicolumn{1}{c|}{ 3 } &
+  \multicolumn{1}{c|}{ USD 10 } &
+  \multicolumn{1}{c|}{ USD 30 } \\ \hline
+  
+ Bomba peristáltica &
+  \multicolumn{1}{c|}{ 1 } &
+  \multicolumn{1}{c|}{ USD 100 } &
+  \multicolumn{1}{c|}{ USD 100 } \\ \hline
+  
+ Manguera de silicona &
+  \multicolumn{1}{c|}{ 1 } &
+  \multicolumn{1}{c|}{ USD 20 } &
+  \multicolumn{1}{c|}{ USD 20 } \\ \hline
+
+ Sensor de temperatura &
+  \multicolumn{1}{c|}{ 1 } &
+  \multicolumn{1}{c|}{ USD 50 } &
+  \multicolumn{1}{c|}{ USD 50 } \\ \hline
+  
+ Encoder rotativo con botón &
+  \multicolumn{1}{c|}{ 1 } &
+  \multicolumn{1}{c|}{ USD 5 } &
+  \multicolumn{1}{c|}{ USD 5 } \\ \hline
+  
+ Fuente de alimentación &
+  \multicolumn{1}{c|}{ 1 } &
+  \multicolumn{1}{c|}{ USD 10 } &
+  \multicolumn{1}{c|}{ USD 10 } \\ \hline   
+
+ Componentes varios para prototipo &
+  \multicolumn{1}{c|}{ 1 } &
+  \multicolumn{1}{c|}{ USD 50 } &
+  \multicolumn{1}{c|}{ USD 50 } \\ \hline  
+  
 \multicolumn{3}{|c|}{SUBTOTAL} &
-  \multicolumn{1}{c|}{} \\ \hline
-\rowcolor[HTML]{C0C0C0} 
+  \multicolumn{1}{c|}{ USD 11165 } \\ \hline
+  
+\rowcolor[HTML]{C0C0C0}
 \multicolumn{4}{|c|}{\cellcolor[HTML]{C0C0C0}COSTOS INDIRECTOS} \\ \hline
 \rowcolor[HTML]{C0C0C0} 
 Descripción &
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Cantidad} &
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor unitario} &
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor total} \\ \hline
-\multicolumn{1}{|l|}{} &
-   &
-   &
-   \\ \hline
-\multicolumn{1}{|l|}{} &
-   &
-   &
-   \\ \hline
-\multicolumn{1}{|l|}{} &
-   &
-   &
-   \\ \hline
+ 
+\multicolumn{1}{|l|}{30\% del costo directo} &
+   \multicolumn{1}{c|}{ 1 } &
+   \multicolumn{1}{c|}{ USD 3350 } &
+   \multicolumn{1}{c|}{ USD 3350 }\\ \hline
+   
 \multicolumn{3}{|c|}{SUBTOTAL} &
-  \multicolumn{1}{c|}{} \\ \hline
+  \multicolumn{1}{c|}{ USD 3350 } \\ \hline
 \rowcolor[HTML]{C0C0C0}
 \multicolumn{3}{|c|}{TOTAL} &
-   \\ \hline
+   USD 14510\\ \hline
 \end{tabularx}%
 \end{table}
 
