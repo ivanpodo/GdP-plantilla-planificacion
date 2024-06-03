@@ -28,7 +28,7 @@ codirector, % Uncomment to add a codirector to the title page
  
 \fechaINICIO{29 de abril de 2024}		%Fecha de inicio de la cursada de GdP \fechaInicioName
 \fechaFINALPlan{11 de junio de 2024} 	%Fecha de final de cursada de GdP
-\fechaFINALTrabajo{10 de diciembre de 2024}	%Fecha de defensa pública del trabajo final
+\fechaFINALTrabajo{14 de noviembre de 2024}	%Fecha de defensa pública del trabajo final
 
 
 \begin{document}
@@ -59,7 +59,7 @@ Revisión & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Detalles de los cambios 
 1      & Se completa hasta el punto 5 inclusive                 & {7} de {mayo} de 2024 \\ \hline
 2      & Se completa hasta el punto 9 inclusive					& {14} de {mayo} de 2024 \\ \hline
 3      & Se completa hasta el punto 12 inclusive                & {21} de {mayo} de 2024 \\ \hline
-%4      & Se completa el plan	                                 & {día} de {mes} de 202X \\ \hline
+4      & Se completa el plan	                                & {28} de {mayo} de 2024 \\ \hline
 %		  Se puede agregar algo más \newline
 %		  En distintas líneas \newline
 %		  Así                                                    & {día} de {mes} de 202X \\ \hline
@@ -82,7 +82,7 @@ Buenos Aires, \fechaInicioName
 
 \vspace{2cm}
 
-Por medio de la presente se acuerda con el Ing. \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'' y consistirá en la implementación de un prototipo de un sistema de control de pH para cultivos hidropónicos. El trabajo tendrá un presupuesto preliminar estimado de 720 horas y un costo de \$14510000, con fecha de inicio el \fechaInicioName\hspace{1px} y fecha de presentación pública el \fechaFinalName.
+Por medio de la presente se acuerda con el Ing. \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'' y consistirá en la implementación de un prototipo de un sistema de control de pH para cultivos hidropónicos. El trabajo tendrá un presupuesto preliminar estimado de 648 horas y un costo de \$13111000, con fecha de inicio el \fechaInicioName\hspace{1px} y fecha de presentación pública el \fechaFinalName.
 
 Se adjunta a esta acta la planificación inicial.
 
@@ -344,30 +344,30 @@ Los entregables de proyecto son:
 	\item Diseño de las interfaces de la pantalla (16 h).
 	\end{enumerate}
 	
-\item Desarrollo del hardware (152 h)
+\item Desarrollo del hardware (132 h)
 	\begin{enumerate}
 	\item Elección de conectores y componentes de potencia (24 h).
 	\item Selección de componentes varios (8 h).
-	\item Diseño de diagramas esquemáticos (60 h).
+	\item Diseño de diagramas esquemáticos (40 h).
 	\item Diseño del PCB y de los archivos de fabricación (40 h).
 	\item Armado del prototipo (20 h).
 	\end{enumerate}
 	
-\item Desarrollo del firmware (268 h)
+\item Desarrollo del firmware (244 h)
 	\begin{enumerate}
-	\item Elección de la arquitectura (16 h).
+	\item Elección de la arquitectura (12 h).
 	\item Diseño en papel de los módulos a implementar (12 h).
 	\item Diseño de las máquinas de estados (40 h).
 	\item Diseño de pruebas (40 h).
-	\item Programación de firmware (120 h).
+	\item Programación de firmware (100 h).
 	\item Verificación y validación (40 h).
 	\end{enumerate}
 	
-\item Pruebas y calibración (80 h)
+\item Pruebas y calibración (52 h)
 	\begin{enumerate}
-	\item Prueba del prototipo en modo de funcionamiento normal (40 h).
-	\item Prueba del prototipo en modo de funcionamiento en falla (20 h).
-	\item Ajustes finales y puesta a punto (20 h).
+	\item Prueba del prototipo en modo de funcionamiento normal (20 h).
+	\item Prueba del prototipo en modo de funcionamiento en falla (16 h).
+	\item Ajustes finales y puesta a punto (16 h).
 	\end{enumerate}
 	
 \item Presentación final (92 h)
@@ -378,7 +378,7 @@ Los entregables de proyecto son:
 	\end{enumerate}
 \end{enumerate}
 
-Cantidad total de horas: 720 h.
+Cantidad total de horas: 648 h.
 
 \section{10. Diagrama de Activity On Node}
 \label{sec:AoN}
@@ -389,6 +389,8 @@ Cantidad total de horas: 720 h.
 \caption{Diagrama de \textit{Activity on Node}.}
 \label{fig:AoN}
 \end{figure}
+
+En rojo se marca el camino crítico.
 
 \section{11. Diagrama de Gantt}
 \label{sec:gantt}
@@ -434,11 +436,11 @@ Descripción &
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor total} \\ \hline
  
  Salario ingeniero &
-  \multicolumn{1}{c|}{ 720 } &
+  \multicolumn{1}{c|}{ 648 } &
   \multicolumn{1}{c|}{ USD 15 } &
-  \multicolumn{1}{c|}{ USD 10800 } \\ \hline
+  \multicolumn{1}{c|}{ USD 9720 } \\ \hline
   
- Punta de prueba pH &
+ Punta de prueba de pH &
   \multicolumn{1}{c|}{ 1 } &
   \multicolumn{1}{c|}{ USD 100 } &
   \multicolumn{1}{c|}{ USD 100 } \\ \hline
@@ -473,13 +475,13 @@ Descripción &
   \multicolumn{1}{c|}{ USD 10 } &
   \multicolumn{1}{c|}{ USD 10 } \\ \hline   
 
- Componentes varios para prototipo &
+ Componentes varios para el prototipo &
   \multicolumn{1}{c|}{ 1 } &
   \multicolumn{1}{c|}{ USD 50 } &
   \multicolumn{1}{c|}{ USD 50 } \\ \hline  
   
 \multicolumn{3}{|c|}{SUBTOTAL} &
-  \multicolumn{1}{c|}{ USD 11165 } \\ \hline
+  \multicolumn{1}{c|}{ USD 10085 } \\ \hline
   
 \rowcolor[HTML]{C0C0C0}
 \multicolumn{4}{|c|}{\cellcolor[HTML]{C0C0C0}COSTOS INDIRECTOS} \\ \hline
@@ -491,14 +493,14 @@ Descripción &
  
 \multicolumn{1}{|l|}{30\% del costo directo} &
    \multicolumn{1}{c|}{ 1 } &
-   \multicolumn{1}{c|}{ USD 3350 } &
-   \multicolumn{1}{c|}{ USD 3350 }\\ \hline
+   \multicolumn{1}{c|}{ USD 3026 } &
+   \multicolumn{1}{c|}{ USD 3026 }\\ \hline
    
 \multicolumn{3}{|c|}{SUBTOTAL} &
-  \multicolumn{1}{c|}{ USD 3350 } \\ \hline
+  \multicolumn{1}{c|}{ USD 3026 } \\ \hline
 \rowcolor[HTML]{C0C0C0}
 \multicolumn{3}{|c|}{TOTAL} &
-   USD 14510\\ \hline
+   USD 13111\\ \hline
 \end{tabularx}%
 \end{table}
 
@@ -506,31 +508,37 @@ Descripción &
 \section{13. Gestión de riesgos}
 \label{sec:riesgos}
 
-\begin{consigna}{red}
-a) Identificación de los riesgos (al menos cinco) y estimación de sus consecuencias:
- 
-Riesgo 1: detallar el riesgo (riesgo es algo que si ocurre altera los planes previstos de forma negativa)
-\begin{itemize}
-	\item Severidad (S): mientras más severo, más alto es el número (usar números del 1 al 10).\\
-	Justificar el motivo por el cual se asigna determinado número de severidad (S).
-	\item Probabilidad de ocurrencia (O): mientras más probable, más alto es el número (usar del 1 al 10).\\
-	Justificar el motivo por el cual se asigna determinado número de (O). 
-\end{itemize}   
+a) Identificación de los riesgos y estimación de sus consecuencias:
 
-Riesgo 2:
+Riesgo 1: Problemas de compatibilidad o limitaciones en las herramientas sin licencia seleccionadas para llevar a cabo el proyecto.
 \begin{itemize}
-	\item Severidad (S): X.\\
-	Justificación...
-	\item Ocurrencia (O): Y.\\
-	Justificación...
+	\item Severidad (6): Darse cuenta en una etapa avanzada del proyecto de un problema de este tipo, puede representar una importante pérdida tiempo.
+	\item Probabilidad de ocurrencia (4):  Las herramientas sin licencia son ampliamente utilizadas, pero las limitaciones no siempre son evidentes.
 \end{itemize}
 
-Riesgo 3:
+Riesgo 2: Que los componentes requeridos para el prototipo no estén disponibles para la compra.
 \begin{itemize}
-	\item Severidad (S):  X.\\
-	Justificación...
-	\item Ocurrencia (O): Y.\\
-	Justificación...
+	\item Severidad (8): La falta de componentes puede detener el desarrollo y pruebas del hardware retrasando el proyecto.
+	\item Probabilidad de ocurrencia (7): Hay poca disponibilidad de componentes específicos, o de precisión, en el mercado local.
+\end{itemize}
+
+Riesgo 3: Falta de disponibilidad de equipos de Cannfeel SA requeridos para las pruebas.
+\begin{itemize}
+	\item Severidad (8): Causaría retrasos en las pruebas y el desarrollo del proyecto.
+	\item Probabilidad de ocurrencia (4): Existe \textit{stock} de los dispositivos requeridos. 
+\end{itemize}
+
+Riesgo 4:  Características del hardware seleccionado insuficientes para satisfacer las necesidades
+del sistema.
+\begin{itemize}
+	\item Severidad (8): Podría causar un mal funcionamiento del equipo en etapas avanzadas del proyecto.
+	\item Probabilidad de ocurrencia (3): El hardware será verificado y validado por el director. 
+\end{itemize}
+
+Riesgo 5:  Informe de avances inadecuado.
+\begin{itemize}
+	\item Severidad (7): La falta de transparencia y comunicación puede conducir a tomas de decisiones erroneas.
+	\item Probabilidad de ocurrencia (2): Las reuniones mensuales y continua comunicación con el director disminuyen la ocurrencia de este riesgo. 
 \end{itemize}
 
 
@@ -542,77 +550,144 @@ b) Tabla de gestión de riesgos:      (El RPN se calcula como RPN=SxO)
 \hline
 \rowcolor[HTML]{C0C0C0} 
 Riesgo & S & O & RPN & S* & O* & RPN* \\ \hline
-       &   &   &     &    &    &      \\ \hline
-       &   &   &     &    &    &      \\ \hline
-       &   &   &     &    &    &      \\ \hline
-       &   &   &     &    &    &      \\ \hline
-       &   &   &     &    &    &      \\ \hline
+   1   & 6 & 4 &  24 &    &    &      \\ \hline
+   2   & 8 & 7 &  56 & 5  & 4  & 20   \\ \hline
+   3   & 8 & 4 &  32 & 8  & 2  & 20   \\ \hline
+   4   & 8 & 3 &  24 &    &    &      \\ \hline
+   5   & 7 & 2 &  14 &    &    &      \\ \hline
 \end{tabularx}%
 \end{table}
 
 Criterio adoptado: 
 
-Se tomarán medidas de mitigación en los riesgos cuyos números de RPN sean mayores a...
+Se tomarán medidas de mitigación en los riesgos cuyos números de RPN sean mayores a 30.
 
 Nota: los valores marcados con (*) en la tabla corresponden luego de haber aplicado la mitigación.
 
 c) Plan de mitigación de los riesgos que originalmente excedían el RPN máximo establecido:
- 
-Riesgo 1: plan de mitigación (si por el RPN fuera necesario elaborar un plan de mitigación).
-  Nueva asignación de S y O, con su respectiva justificación:
-  \begin{itemize}
-	\item Severidad (S*): mientras más severo, más alto es el número (usar números del 1 al 10).
-          Justificar el motivo por el cual se asigna determinado número de severidad (S).
-	\item Probabilidad de ocurrencia (O*): mientras más probable, más alto es el número (usar del 1 al 10).
-          Justificar el motivo por el cual se asigna determinado número de (O).
-	\end{itemize}
 
-Riesgo 2: plan de mitigación (si por el RPN fuera necesario elaborar un plan de mitigación).
- 
-Riesgo 3: plan de mitigación (si por el RPN fuera necesario elaborar un plan de mitigación).
+Acción de mitigación del riesgo 2:	Identificar proveedores en el país de componentes electrónicos y consultar disponibilidad de componentes. Diseñar en función de la disponibilidad local y capacidad de reemplazo.
 
-\end{consigna}
+\begin{itemize}
+	\item Severidad (5): Mediante un diseño basado en la disponibilidad, el riesgo disminuye.
+	\item Probabilidad de ocurrencia (4): La aparición de posibles reemplazos disminuye la ocurrencia inicial.
+\end{itemize}
+
+Acción de mitigación del riesgo 3:	Reservar con antelación los equipos que se necesitarán para hacer
+las pruebas requeridas.
+\begin{itemize}
+	\item Severidad (8): El riesgo seguirá existiendo.
+	\item Probabilidad de ocurrencia (2): La ocurrencia disminuye debido a las acciones de previsión.
+\end{itemize}
 
 
 \section{14. Gestión de la calidad}
 \label{sec:calidad}
 
-\begin{consigna}{red}
-Elija al menos diez requerimientos que a su criterio sean los más importantes/críticos/que aportan más valor y para cada uno de ellos indique las acciones de verificación y validación que permitan asegurar su cumplimiento.
-
 \begin{itemize} 
-\item Req \#1: copiar acá el requerimiento con su correspondiente número.
+
+\item Requerimiento 1.2: El hardware deberá tener un driver para manejar una bomba peristáltica.
 
 \begin{itemize}
-	\item Verificación para confirmar si se cumplió con lo requerido antes de mostrar el sistema al cliente. Detallar.
-	\item Validación con el cliente para confirmar que está de acuerdo en que se cumplió con lo requerido. Detallar. 
+	\item Verificación: Asegurarse que el diseño del hardware incluye un driver adecuado para controlar una bomba peristáltica. Verificar que los esquemáticos y las especificaciones del driver cumplen con los requisitos de la bomba peristáltica.
+	\item Validación: Activar y controlar la bomba peristáltica utilizando el driver y verificar el correcto funcionamiento.
+\end{itemize}
+
+\item Requerimiento 1.7: El sistema deberá encender y apagar una bomba de recirculación opcional.
+
+\begin{itemize}
+	\item Verificación: Asegurarse que el diseño de hardware y de firmware incluyen la capacidad de controlar una bomba de recirculación opcional.
+	\item Validación: Activar el control de la bomba y verificar que el sistema la puede encender y apagar.
+\end{itemize}
+
+\item Requerimiento 2.1: El sistema deberá compensar la medición de pH con la temperatura de la solución.
+
+\begin{itemize}
+	\item Verificación: Se analizarán distintos métodos de medición con sus compensaciones.
+	\item Validación: Realizar mediciones de pH a diferentes temperaturas y validar que el sistema compensa adecuadamente las lecturas.
+\end{itemize}
+
+\item Requerimiento 2.2: El sistema deberá reconocer una falla por falta de solución \textit{buffer}.
+
+\begin{itemize}
+	\item Verificación: Asegurarse que el diseño de hardware y de firmware incluye mecanismos para detectar la presencia o ausencia de la solución \textit{buffer}.
+	\item Validación: Simular la condición de falta de solución \textit{buffer} y validar que el sistema reconoce la falla y notifica adecuadamente.
+\end{itemize}
+
+\item Requerimiento 2.3: El sistema deberá reconocer si no puede controlar el pH de la solución nutritiva.
+
+\begin{itemize}
+	\item Verificación: Verificar que el algoritmo de detección de fallos en el control del pH está implementado correctamente en el código.
+	\item Validación: Simular condiciones en las que el sistema no puede controlar el pH y validar que la falla se reconoce y notifica adecuadamente.
+\end{itemize}
+
+\item Requerimiento 2.4: El sistema deberá tener un modo de control donde intente corregir el pH de la solución constantemente.
+
+\begin{itemize}
+	\item Verificación: Verificar que el algoritmo de control de pH está implementado correctamente en el código.
+	\item Validación: Activar el modo de control de pH y verificar que el sistema lo corrige continuamente.
+\end{itemize}
+
+\item Requerimiento 2.5: El sistema deberá contar con un modo de solo lectura que se limite a mostrar en la pantalla los valores obtenidos de los sensores.
+
+\begin{itemize}
+	\item Verificación: Verificar que la interfaz de usuario y el firmware están implementados para soportar este modo.
+	\item Validación: Monitorear el comportamiento del sistema durante un período prolongado para asegurar que mantiene la funcionalidad de solo lectura sin fallos.
+\end{itemize}
+
+\item Requerimiento 2.6: El sistema deberá contar con un modo de configuración donde se podrán calibrar los sensores y configurar el valor deseado de pH para el control.
+
+\begin{itemize}
+	\item Verificación: Corroborar que la interfaz de usuario y el firmware están implementados para soportar la calibración de los sensores y la configuración del valor de pH.
+	\item Validación: Verificar que los sensores pueden ser calibrados correctamente. Configurar el valor deseado de pH y corroborar que el sistema guarda y utiliza este valor correctamente.
+\end{itemize}
+
+\item Requerimiento 3.1: El controlador se deberá integrar al ecosistema de dispositivos de la empresa Cannfeel mediante un protocolo propietario.
+
+\begin{itemize}
+	\item Verificación: Lectura de los documentos internos de funcionamiento del protocolo. Corroboración de la implementacion en el firmware.
+	\item Validación: Demostración de funcionamiento dentro del ecosistema de la empresa.
+\end{itemize}
+
+\item Requerimiento 4.1: El hardware deberá contar con una pantalla no táctil.
+
+\begin{itemize}
+	\item Verificación: Asegurarse que el diseño del hardware incluye una pantalla no táctil que cumple con los requisitos del proyecto.
+	\item Validación: Verificar que la pantalla muestra la información esperada de manera clara y precisa. Monitorear el comportamiento durante un período prolongado para asegurar un funcionamiento confiable.
 \end{itemize}
 
 \end{itemize}
-
-Tener en cuenta que en este contexto se pueden mencionar simulaciones, cálculos, revisión de hojas de datos, consulta con expertos, mediciones, etc.  
-
-Las acciones de verificación suelen considerar al entregable como ``caja blanca'', es decir se conoce en profundidad su funcionamiento interno.  
-
-En cambio, las acciones de validación suelen considerar al entregable como ``caja negra'', es decir, que no se conocen los detalles de su funcionamiento interno.
-
-\end{consigna}
 
 \section{15. Procesos de cierre}    
 \label{sec:cierre}
 
-\begin{consigna}{red}
-Establecer las pautas de trabajo para realizar una reunión final de evaluación del proyecto, tal que contemple las siguientes actividades:
+Se establecen las siguientes actividades de finalización de proyecto:
 
 \begin{itemize}
-	\item Pautas de trabajo que se seguirán para analizar si se respetó el Plan de Proyecto original:\\
-	 - Indicar quién se ocupará de hacer esto y cuál será el procedimiento a aplicar. 
-	\item Identificación de las técnicas y procedimientos útiles e inútiles que se emplearon, los problemas que surgieron y cómo se solucionaron:\\
-	 - Indicar quién se ocupará de hacer esto y cuál será el procedimiento para dejar registro.
-	\item Indicar quién organizará el acto de agradecimiento a todos los interesados, y en especial al equipo de trabajo y colaboradores:\\
-	  - Indicar esto y quién financiará los gastos correspondientes.
+	
+	\item Analizar si se respetó el Plan de Proyecto original teniendo en cuenta las fechas y duración de las tareas. Se hará lo mismo con los costos y riesgos previstos desde el comienzo.
+	
+	Para llevar a cabo esta acividad, se confeccionará una hoja de cálculo comparativa y se contrastará lo estimado con lo real.
+	\begin{itemize}
+		\item Responsable: Ing. Iván Podoroska.
+	\end{itemize}
+	
+	\item Identificación de las técnicas y procedimientos útiles e inútiles que se utilizaron, y los
+problemas que surgieron y cómo se solucionaron.
+	\begin{itemize}
+		\item Responsable: Ing. Iván Podoroska.
+	\end{itemize}
+	
+	\item Archivado de toda la documentación requerida y generada para la realización del proyecto.
+	\begin{itemize}
+		\item Responsable: Ing. Iván Podoroska.
+	\end{itemize}
+	
+	\item Acto de cierre y finalización de proyecto. Se agradecerá a todas las partes involucradas.
+	\begin{itemize}
+		\item Responsable: Sr. Francisco Yuvone.
+	\end{itemize}
+	
 \end{itemize}
-
-\end{consigna}
 
 \end{document}
